@@ -1,0 +1,225 @@
+body {
+    font-family: Georgia, serif;
+}
+
+#cover-page {
+    /* background-image: url("assets/images/alokik-profile0.jpeg"); */
+    background-image: url("assets/images/anime1.jpeg");
+    /* background-image: url("assets/images/anime2.jpeg"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30,0,85,0.2);
+    z-index: 2;
+}
+
+#on-top {
+    padding: 0px 30px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+
+#enter-btn {
+    background-image: linear-gradient(to bottom right, rgba(76, 37, 42, 0.85), rgba(150, 45, 49, 0.85), rgba(232, 87, 66, 0.85));
+    padding: 15px 60px;
+    color: white;
+    font-size: larger;
+    font-family: Georgia, serif;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+#enter-btn:hover {
+    padding: 15px 80px;
+    background-image: linear-gradient(to bottom right, rgba(76, 37, 42, 0.95), rgba(150, 45, 49, 0.95), rgba(232, 87, 66, 0.95));
+    transition: all 0.5s;
+}
+
+#main-content {
+    display: none;
+    background-color:#93f5b5;
+}
+
+#who-am-i {
+    background-image: url(./assets/images/bg-texture.png);
+    background-repeat: none;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#art {
+    background: linear-gradient(to bottom, #93f5b5, #a7d1fc, #756bfa, #d46fe3);
+}
+#art-title{
+    background-color: #12151f;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-ideas {
+    height: 500px;
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zvtA8W6CtwVF3FuH7APWO5951GI4ZPSGkQ&usqp=CAU); */
+    /* background-image: url(./assets/art/ideas/dark.webp); */
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+.card-more-ideas {
+    height: 500px;
+    background: #12151f;
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+
+.card-ideas-overlay {
+    background-color: rgba(0,0,0,0.3);
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+}
+.card-ideas-overlay:hover {
+    background: linear-gradient(to top, #550b75, rgba(0,0,0,0));
+}
+
+.card-ideas-ontop {
+    padding: 0px 10px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%,-50%);
+    color: white;
+}
+.card-ideas-title {
+    font-size:24px;
+    font-variant: small-caps;
+}
+
+.card-ideas-btn {
+    background-color: whitesmoke;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.card-ideas-btn:hover {
+    background-color: white;
+    color: #550b75;
+}
+
+li::marker {
+    content: "» ";
+}
+
+#idea-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+#idea-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    color: #12151f;
+    width: 98vw;
+    max-height: 98vh;
+    max-width: 1000px;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 15px;
+    z-index: 200;
+}
+.idea-modal-btn {
+    color: white;
+    background-color: #12151f;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+.idea-modal-nav-btn {
+    color: white;
+    background-color: #313133;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 20px;
+    vertical-align: 5px;
+}
+.idea-modal-read-btn{
+    text-decoration: none;
+    color: white;
+    background-color: #12151f;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 40px;
+}
+.idea-modal-read-btn:hover{
+    color: whitesmoke;
+}
+
+.art-previous-content-title{
+    color: black;
+    font-size: large;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.art-previous-content-title.poems{
+    background: linear-gradient(to bottom right, #fbffd6,#d87dff);
+}
+.art-previous-content-title.songs{
+    background: linear-gradient(to bottom right, rgb(255, 227, 247), #7d91ff);
+}
+.art-previous-content-title.scripts{
+    background: linear-gradient(to bottom right, #fffed9,#7dffa2);
+}
+.art-previous-content-title.stories{
+    background: linear-gradient(to bottom right, rgb(255, 227, 247),#ffe97d);
+}
+.art-previous-content-title:hover{
+    background: #12151f;
+    color: whitesmoke;
+}
